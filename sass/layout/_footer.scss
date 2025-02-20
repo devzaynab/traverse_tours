@@ -1,0 +1,87 @@
+.footer{
+      background-color: $color-grey-light-3;
+      padding: 5rem 0;
+      font-size: 1.4rem;
+      color: $color-grey-light-1;
+      cursor: pointer;
+
+      @include respond(tab-port) {
+        margin-bottom: $gutter-vertical-small;
+        }
+
+      @include respond(phone) {
+        margin-bottom: $gutter-vertical-small;
+        align: center;
+        }
+    
+      &__social-media{
+          margin-top: 3rem;
+
+      }
+
+      &__icon{
+           font-size: 2rem;
+           border: 1px solid $color-text-white;
+           padding: .5rem;
+           color: $color-text-white;
+           margin-right: 3rem;
+           &:hover{
+            color: $color-black;
+            background-color: $color-grey-light-1;
+           }
+      }
+
+
+      &__list{
+          list-style: none;
+      }
+      &__items{
+            &:hover,
+            &:active{
+             transform: rotate(2deg) ;
+            } 
+
+          &:not(:last-child){
+            margin-bottom:2rem ;
+          }
+      }
+     
+
+      &__link{
+         &:link,
+         &:visited{
+            text-decoration: none;
+            color: $color-grey-light-1;
+            text-transform: uppercase;
+            display: inline-block;
+         }
+
+         &:hover,
+         &:active{
+          color: $color-primary-light;
+          box-shadow: 0 1rem 2rem rgba($color-black, .4);
+          
+         }
+      }
+      &__info{
+            list-style: none;
+            &:link,
+            &:visited{
+               text-decoration: none;
+               color: $color-grey-light-1;
+               text-transform: uppercase;
+               display: inline-block;
+            }
+          &-text{
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+          }
+          &-icon{
+            margin-right: 2rem;
+          } 
+      }
+      &__copyright{
+            color: $color-grey-light-4;
+      }
+}

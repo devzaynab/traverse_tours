@@ -1,0 +1,45 @@
+.header {
+    height: 95vh;
+    width: 100%;
+    background-image: linear-gradient(to right bottom,   
+    rgba($color-primary, 0.801),  
+    rgba($color-primary-dark, 0.801)), 
+    url("../image/travel-palette6.jpg");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0,100% 0,100% 75vh,0 100%);
+
+    @include respond(tab-land) {
+        clip-path: polygon(0 0,100% 0,100% 75vh,0 94%);
+        }
+  
+    @include respond(phone) {
+        clip-path: polygon(0 0,100% 0,100% 85vh,0 97%);
+
+    }
+    
+    &__logo{
+        font-size: 2.5rem;
+        font-weight: bolder;
+        cursor: pointer;
+        color:$color-text-white;
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    
+    &__logo span{
+        color: $color-text-blue;
+    }
+    
+    &__text-box{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    }
+    
